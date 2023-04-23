@@ -38,7 +38,7 @@ function percent(){
     PERCENT=$1
     if [ $PERCENT -le 50 ]; then
         echo -e "\033[1;34m$PERCENT %\033[0m"
-    elif [ $PERCENT -ge 50  && $PERCENT -le 80 ]; then
+    elif [ $PERCENT -gt 50  && $PERCENT -le 80 ]; then
         echo -e "\033[1;33m$PERCENT %\033[0m"
     elif [ $PERCENT -gt 80 ]; then
         echo -e "\033[1;31m$PERCENT %\033[0m"
