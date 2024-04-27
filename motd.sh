@@ -21,8 +21,6 @@ APACHE_UPTIME=$(systemctl status apache2 | grep Active | awk {'print $9'})
 MARIADB_STATUS=$(systemctl status mariadb | grep Active | awk {'print $2'})
 MARIADB_UPTIME=$(systemctl status mariadb | grep Active | awk {'print $9'})
 
-ZNUNY_VERSION=$(cat /opt/otrs/RELEASE | grep -i "version" | awk {'print $3'})
-
 function status(){
     STATUS=$1
     UPTIME=$2
@@ -56,8 +54,6 @@ echo -e "-----------------------------------------------------------------------
 echo -e "Nome do Servidor: $HOSTNAME\n"
 
 echo -e "Distribuicao Linux: $DISTRO\n"
-
-echo -e "Versao do Znuny: $ZNUNY_VERSION\n"
 
 echo -e "CPUs: $CPUS    Carga media:  \033[1;34m1 min - $LOAD1\033[0m  \033[1;34m5 min - $LOAD5\033[0m  \033[1;34m15 min - $LOAD15\033[0m\n"
 
